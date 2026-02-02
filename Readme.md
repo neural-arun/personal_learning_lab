@@ -1,103 +1,98 @@
 
-# Advanced Python 🐍
+# 🧪 Personal Learning Lab | Arun Yadav
 
-This repository documents my **hands-on journey from Python fundamentals to async-first backend development**.
-
-The goal is not just to “learn Python”, but to **build production-ready thinking** required for:
-
-* Backend APIs (FastAPI)
-* Web scraping systems
-* Async I/O–heavy applications
-* Real-world automation and freelance work
-
-This repo evolves as I learn — it’s a **living codebase**, not a finished course.
+### 🚧 **Code. Break. Fix. Document.**
+**The central repository for my learning journey.**
 
 ---
 
-## 📁 Repository Structure
+## 📖 About This Repo
+This is **not** a portfolio for clients. This is my **laboratory**.
 
-Folders are **numbered in learning order**, moving from basics → OOP → async systems.
+Here, I document my raw learning process, code snippets, failures, and breakthroughs as I build the technical foundation for **NEETPrepGPT** and **Symptom2Specialist**. This repository serves as the "source of truth" for my technical growth, structured strictly according to my **Roadmap**.
 
-### Core Python & Foundations
-
-* **01_intro_to_python**
-  Python basics and syntax foundations.
-* **02_python_fundamentals**
-  Deeper practice with core language concepts.
-* **07_files_in_python**
-  File handling, CSV, JSON, and data conversions.
-* **05_errors_in_python**
-  Errors, exceptions, and defensive coding.
-* **06_debugging_in_vscode**
-  Practical debugging workflows in VS Code.
-
-### Object-Oriented Programming
-
-* **03_movie_collection_app**
-  Small OOP-based project (Movie Collection App).
-* **04_object_orientated_programming (OOP)**
-  Core OOP concepts and patterns.
-* **08_advanced_oop**
-  Advanced OOP features, magic methods, and decorators.
-* **09_pythonic_toolkit**
-  Writing clean, idiomatic, and maintainable Python.
-
-### Asynchronous Programming (Core Focus)
-
-* **10_asynchronous_programming**
-  Async fundamentals: `async/await`, event loop, concurrency model.
-* **11_practical_async**
-  Applying async to real-world scenarios.
-* **12_async_design_patterns**
-  Async patterns for APIs, scraping, and database I/O.
-* **13_async_mini_project**
-  End-to-end async mini project.
-* **14_async_mindset_document**
-  Mental models, best practices, and system-level async thinking.
-
-### Extras
-
-* **some_extra_projects**
-  Additional mini-projects for reinforcement and experimentation.
+**Current Focus:** Phase 1 — Building the Core Technical Foundation (Python, Backend, AI, & DevOps).
 
 ---
 
-## 🎯 Goals
+## 🗺️ The Roadmap: Phase 1 Execution
 
-* Build a **strong, practical Python foundation** for backend development.
-* Become comfortable with **async design patterns** for high-performance I/O.
-* Use this repo as a **reference + playground** while building real products and freelance systems.
-* Prepare for **FastAPI, scraping pipelines, and production APIs**.
+My learning is divided into 4 high-performance modules. I do not move to the next module until the **Definition of Done** is met.
+
+### 🐍 Module 1: The High-Performance Data Engineer
+> **Theme:** "The Python, The Speed, The Hunter, The Analyst"  
+> **Goal:** transform from script-kiddie to professional engineer capable of high-speed data gathering.
+
+- [ ] **Advanced OOP:** Class inheritance, polymorphism, and "Pythonic" blueprints.
+- [ ] **Async & Speed:** `asyncio`, `await`, and non-blocking I/O.
+- [ ] **Web Scraping (The Hunt):** `aiohttp` for speed, `Playwright` for dynamic sites.
+- [ ] **Data Science Stack:** cleaning messy scraped data with `Pandas` & `NumPy`.
+- [ ] **Engineering Habits:** `Git` flow and `pytest` for stability.
+- [ ] **🏁 Capstone Project:** "The Async Data Pipeline" (Scrape → Clean → Analyze). 
+
+### 🏗️ Module 2: The Backend Monolith
+> **Theme:** "The Architect, The Guard, and The Flash"  
+> **Goal:** Build a secure, scalable API server (The Engine of NEETPrepGPT).
+
+- [ ] **Database Design:** PostgreSQL, Normalization, and complex SQL joins.
+- [ ] **FastAPI Framework:** Pydantic validation, Dependency Injection, REST architecture.
+- [ ] **ORM & Migrations:** SQLAlchemy & Alembic for database management.
+- [ ] **Security:** JWT Authentication, Password Hashing (Bcrypt).
+- [ ] **Caching:** Redis for high-performance data retrieval.
+- [ ] **🏁 Capstone Project:** "The Secure Backend System" (Auth + API + DB).
+
+### 🧠 Module 3: The AI Intelligence Layer
+> **Theme:** "The Brain, The Memory, and The Reasoning"  
+> **Goal:** Integrate LLMs to "read" scraped data and answer student queries without hallucinations.
+
+- [ ] **LLM Fundamentals:** OpenAI API, Tokens, Temperature, System Prompts.
+- [ ] **Prompt Engineering:** Chain of Thought, Few-Shot prompting.
+- [ ] **Vector Databases:** Embeddings, Cosine Similarity, ChromaDB/Pinecone.
+- [ ] **RAG Pipeline:** Retrieval-Augmented Generation (The core of my product).
+- [ ] **Evaluation:** Preventing hallucinations and managing API costs.
+- [ ] **🏁 Capstone Project:** "The AI Tutor Bot" (RAG-powered Q&A).
+
+### 🚢 Module 4: Interfaces & Deployment
+> **Theme:** "The Ship, The Container, and The Cloud"  
+> **Goal:** Package the logic into a Telegram Bot and deploy via Docker.
+
+- [ ] **Telegram Bot Interface:** `python-telegram-bot`, Webhooks, State Machines.
+- [ ] **Dockerization:** Containerizing the App, DB, and Redis with `docker-compose`.
+- [ ] **CI/CD:** Automating tests and deployment with GitHub Actions.
+- [ ] **Cloud Deployment:** Hosting the full stack on Railway/Render.
+- [ ] **🏁 Capstone Project:** "NEETPrepGPT Live" (Production Launch).
 
 ---
 
-## 📌 Current Status
+## 🛠️ Tech Stack & Tools
 
-🚧 **Learning in progress**
-
-* This repo is updated continuously as I complete new topics.
-* Commit history reflects real learning: experiments, mistakes, refactors, and improvements.
-
----
-
-## 🧭 How to Use This Repo
-
-* Follow folders **in order** to mirror the learning path.
-* Explore mini-projects to see **multiple concepts working together**.
-* Check commits to understand the **step-by-step progression**.
+| Category | Technology |
+| :--- | :--- |
+| **Language** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) |
+| **Backend** | ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat-square&logo=fastapi) ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=flat-square&logo=sqlalchemy&logoColor=white) |
+| **Data & AI** | ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white) ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white) ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white) |
+| **Database** | ![Postgres](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white) |
+| **DevOps** | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) |
 
 ---
 
-## 🔗 Why This Repo Exists
+## 📂 Repository Structure
 
-This is not tutorial code.
-
-This is:
-
-* How I **think**
-* How I **practice**
-* How I prepare for **real backend systems**
-
-If you’re learning Python seriously — feel free to explore, fork, or follow along.
+```bash
+personal_learning_lab/
+├── 01_advanced_python/      # Module 1: OOP, Decorators, Async experiments
+├── 02_scraping_lab/         # Module 1: Scrapers (Requests, Selenium)
+├── 03_fastapi_core/         # will be continued.
+````
 
 ---
+
+## 🔗 Connect with Me
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/arun-yadav-768052368)
+[![Twitter](https://img.shields.io/badge/X-000000?style=for-the-badge\&logo=twitter\&logoColor=white)](https://twitter.com/Neural_Arun)
+[![Telegram](https://img.shields.io/badge/Telegram-229ED9?style=for-the-badge\&logo=telegram\&logoColor=white)](https://t.me/Neural_Arun)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge\&logo=whatsapp\&logoColor=white)](https://wa.me/918881109193)
+
+---
+
