@@ -20,13 +20,21 @@ urls = [
 # yahan sirf fetch_html ka skeleton
 
 async def fetch_html(session,url,sem):
-    async with sem:
-        async with session.get(url) as response:
-            return await response.text()
+    try:
+        async with sem:
+            async with session.get(url) as response:
+                if response.status != 200:
+                    return None
+                return await response.text()
+    except asyncio.TimeoutError:
+        return None
+    except aiohttp.ClientError:
+        return None
     
 async def main():
     sem = asyncio.Semaphore(3)
-    async with aiohttp.ClientSession() as session:
+    timeout = aiohttp.ClientTimeout(total=10)
+    async with aiohttp.ClientSession(timeout=timeout) as session:
         html_str_as_list = []
         tasks = []
         for url in urls:
@@ -36,4 +44,7 @@ async def main():
         print(len(html_str_as_list))
         return html_str_as_list
 result = asyncio.run(main())
-print(result)
+success = sum(1 for r in result if isinstance(r, str))
+failed = sum(1 for r in result if r is None)
+
+print(f"Success: {success}, Failed: {failed}")
