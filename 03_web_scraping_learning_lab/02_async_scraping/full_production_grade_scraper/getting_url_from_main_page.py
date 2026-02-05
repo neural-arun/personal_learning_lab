@@ -1,7 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
+from pathlib import Path
 
+BASE_DIR = Path(__file__).parent
 
 # Function that collects article URLs from a given base page
 def collect_article_urls(base_url: str) -> list[str]:
@@ -57,7 +59,8 @@ if __name__ == "__main__":
 
     # Print how many URLs were collected
     print(f"Collected {len(urls)} article URLs")
-
-    # Print only the first 5 URLs (for sanity check)
-    for u in urls[:5]:
-        print(u)
+    with open( BASE_DIR / "list_of_url.py", "w") as f:
+        f.write("URLS = ")
+        f.write(repr(urls))
+        f.write("\n")
+    
