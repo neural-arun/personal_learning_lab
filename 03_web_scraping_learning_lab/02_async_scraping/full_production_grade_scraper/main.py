@@ -2,13 +2,6 @@ import requests
 from typing import Optional, Dict, Any
 from bs4 import BeautifulSoup
 
-URLS = ['https://blog.cloudflare.com/r2-local-uploads/',
-         'https://blog.cloudflare.com/uk-google-ai-crawler-policy/',
-           'https://blog.cloudflare.com/vertical-microfrontends/',
-             'https://blog.cloudflare.com/moltworker-self-hosted-ai-agent/',
-               'https://blog.cloudflare.com/serverless-matrix-homeserver-workers/', 'https://blog.cloudflare.com/q4-2025-internet-disruption-summary/', 'https://blog.cloudflare.com/route-leak-incident-january-22-2026/', 'https://blog.cloudflare.com/acme-path-vulnerability/', 'https://blog.cloudflare.com/astro-joins-cloudflare/', 'https://blog.cloudflare.com/human-native-joins-cloudflare/', 'https://blog.cloudflare.com/cname-a-record-order-dns-standards/', 'https://blog.cloudflare.com/iran-protests-internet-shutdown/', 'https://blog.cloudflare.com/bgp-route-leak-venezuela/', 'https://blog.cloudflare.com/building-our-maintenance-scheduler-on-workers/', 'https://blog.cloudflare.com/fail-small-resilience-plan/', 'https://blog.cloudflare.com/h1-2025-transparency-report/', 'https://blog.cloudflare.com/r2-sql-aggregations/', 'https://blog.cloudflare.com/radar-2025-year-in-review/', 'https://blog.cloudflare.com/radar-2025-year-in-review-internet-services/', 'https://blog.cloudflare.com/react2shell-rsc-vulnerabilities-exploitation-threat-brief/']
-
-
 def extract_title(html: str) -> Optional[str]:
     soup = BeautifulSoup(html, "lxml")
 
@@ -21,8 +14,6 @@ def extract_title(html: str) -> Optional[str]:
         return None
 
     return title
-
-
 
 def extract_publish_date(html: str) -> Optional[str]:
     soup = BeautifulSoup(html, "lxml")
@@ -40,9 +31,6 @@ def extract_publish_date(html: str) -> Optional[str]:
         return None
 
     return date_text
-
-
-
 
 def extract_authors(html: str) -> list[str]:
     soup = BeautifulSoup(html, "lxml")
@@ -96,8 +84,6 @@ def extract_article_text(html: str) -> Optional[str]:
 
     return "\n\n".join(parts)
 
-
-
 def scrape_article(article_url: str) -> Optional[Dict[str, Any]]:
     try:
         response = requests.get(article_url, timeout=10)
@@ -127,5 +113,18 @@ def scrape_articles(urls: list[str]) -> list[dict]:
             results.append(data)
 
     return results
+
+if __name__ == "__main__":
+    urls = []
+    
+
+    articles = scrape_articles(urls)
+
+    for article in articles:
+        print("=" * 40)
+        print("Title:", article["title"])
+        print("Date:", article["publish_date"])
+        print("Authors:", article["authors"])
+        print("Text preview:", article["article_text"][:300])
 
 
