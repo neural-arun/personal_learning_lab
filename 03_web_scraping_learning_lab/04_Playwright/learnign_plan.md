@@ -229,23 +229,3 @@ Move to Stage 5 when you can, consistently without manual fixes:
 
 ---
 
-# Small risks to watch (failure engineering recap)
-
-* **Selector fragility** — prefer role/text/attribute locators.
-* **Session expiry** — always detect redirect to login.
-* **Infinite-scroll loops** — implement “no-new-items” stop condition.
-* **Legal risks** — don’t bypass CAPTCHA/OTP; respect terms/robots.txt.
-
----
-
-# Immediate next action (do this now — one command)
-
-Run:
-
-```bash
-playwright codegen https://example.com
-```
-
-Watch the recorder, then paste the generated snippet here and I’ll convert it into a **resilient Auth Saver + infinite scroller** script you can run.
-
----
