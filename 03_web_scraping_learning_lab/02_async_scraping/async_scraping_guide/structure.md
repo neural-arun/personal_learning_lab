@@ -1,4 +1,4 @@
-
+below here i am providing you a structure i need full notes of this . the notes should be awesome . 
 
 # 🔥 STAGE 2 — ASYNC SCRAPING
 
@@ -278,3 +278,7 @@ Before async code, fix **thinking**.
 > Tum traffic controller ho.”** ✈️
 
 ---
+
+
+
+i need notes of section 3 , keep it comprehensive and it should have maximum content.
