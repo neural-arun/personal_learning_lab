@@ -52,8 +52,7 @@ msedgedriver*
 # =========================
 # Scraped Data / Generated Files
 # =========================
-data/
-raw_data/
+
 output/
 downloads/
 tmp/
